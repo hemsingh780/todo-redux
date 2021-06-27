@@ -1,0 +1,17 @@
+.Todo{
+   width: 50vh;
+   margin: auto;
+}
+
+.p{
+    margin-top: 5px;
+    color: rgb(13, 13, 202);
+    font-weight: bold;
+}
+.li{ 
+    /* color: white; */
+    text-align: left;
+    border:2px solid #007bff !important;
+    margin-top: 5px;
+    cursor:pointer;
+}

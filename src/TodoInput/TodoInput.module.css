@@ -1,0 +1,9 @@
+.TodoInput{
+    width: 32vh !important; 
+    display: inline-block !important;
+    margin:6px;
+    box-sizing: border-box;
+}
+.Div{
+    width: 100%;
+}

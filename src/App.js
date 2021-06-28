@@ -11,28 +11,28 @@ function App() {
 const dispatch   =  useDispatch()
 
 
-useEffect(()=>{
-  fetch('https://todo-react-redux-2ad8b-default-rtdb.firebaseio.com/Todos.json')
-  .then(response => response.json())
-  .then(responseData => {
-    console.log(responseData)
-    const loadTodo = []
-    if(responseData === null){
-      console.log('data is not here')
-    }else{
-    for(let key in responseData){
-      loadTodo.push({
-        id:key,
-        label:responseData[key].label
-      })
-    }
-   }
-    dispatch({
+  useEffect(()=>{
+    fetch('https://todo-react-redux-2ad8b-default-rtdb.firebaseio.com/Todos.json')
+      .then(response => response.json())
+      .then(responseData => {
+      console.log(responseData)
+      const loadTodo = []
+        if(responseData === null){
+           console.log('data is not here')
+          }else{
+            for(let key in responseData){
+            loadTodo.push({
+            id:key,
+            label:responseData[key].label
+            })
+          }
+        }
+      dispatch({
       type:'GET_DATA',
       payload:loadTodo
+      })
     })
-  })
-},[])
+  },[])
 
 
 

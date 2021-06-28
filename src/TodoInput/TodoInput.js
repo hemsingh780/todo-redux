@@ -8,9 +8,13 @@ import classes from './TodoInput.module.css'
 const TodoInput = (props) => {
 
     const [newTodo,setNewTodo] = useState('');
+
     const handleChange = event =>setNewTodo(event.target.value)
     
     const submitHandler = event => {
+     if(newTodo === ''){
+          alert('input field is required');
+      }
         event.preventDefault();
         props.onAddTodo({
             label:newTodo

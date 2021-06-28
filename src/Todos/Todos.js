@@ -8,10 +8,7 @@ const Todos = (props) => {
     const todos = useSelector((state) => {
         return state.reducer.todos
     })
-    // const deleteTodo = id => dispatch({
-    //     type:'DELETE_TODOS',
-    //     payload:id
-    // })
+  
     if(!todos || !todos.length){
        return <p className={classes.p}>No Todos</p>
     }
